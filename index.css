@@ -1,0 +1,45 @@
+* {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* hero */
+header {
+    background-image : linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url("./images/hero.png");
+    background-size: cover;
+    background-position: center 25%;
+    min-width: 300px;
+    width: 80vw;
+    padding: 1em;
+    margin:0 auto
+}
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+
+
+}
+header .title {
+    color: white;
+    margin: 0;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+/* main */
+/* default message */
+/* movie section */
+/* footer */

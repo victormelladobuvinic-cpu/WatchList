@@ -2,15 +2,45 @@
 <html lang="en">
 <head>
     <!-- google font -->
-     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css link -->
      <link rel="stylesheet" href="/index.css">
+     <!-- font awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Main-WatchList</title>
 </head>
+<!-- <i class="fa-solid fa-circle-plus"></i>
+<i class="fa-solid fa-circle-minus"></i>
+<i class="fa-solid fa-magnifying-glass"></i> -->
+
 <body>
-    
+    <header class="hero-section">
+        <div class="title-container">
+        <h1 class="title">Find your film</h1>
+        <a href="/watchlist.html" class="to-watchlist-a">My Watchlist</a>
+        </div>
+         <form id="search-form">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search-input" placeholder="Search for a movie..." />
+            <button type="submit" id="search-button">Search</button>
+        </form>     
+    </header>
+    <main id="movies-container">
+        <!-- Movie results will be displayed here -->
+         <img src="/images/film-Icon.svg" 
+         alt="film icon" 
+         class="film-icon">
+         <h2 class="exploring-txt">Start exploring</h2>
+
+    </main>
+    <footer class="footer-style">
+
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
