@@ -5,8 +5,13 @@
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        
     
 }
 
@@ -17,10 +22,10 @@ header {
     background-size: cover;
     background-position: center 25%;
     min-width: 300px;
-    width: 100vw;
+    width: 100%;
     height: 15vh;
     padding: 1em;
-    margin:0 auto;
+    
 }
 
 .title-container {
@@ -31,6 +36,8 @@ header {
     padding: 1em;
     width: 80vw;
     margin: 0 auto;
+    max-width: 900px;
+    
 
 
 
@@ -49,15 +56,15 @@ header a {
 #search-form {
     display: flex;
     position: relative;
-    top: -14%;
+    top: 0px;
+    text-align: center;
     align-content: center;
-    justify-content: center;
-    margin: 0 auto;
-    
+    justify-content: center;    
     background-color: white;
-    
     border-radius: 0.5em;
-    width: 80%;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
     
 
 }
@@ -103,7 +110,7 @@ form button:hover {
 }
 /* main */
 .main-container {
-    text-align: center;
+    
     color: #DFDDDD;
     display: flex;
     flex-direction: column;
@@ -112,8 +119,79 @@ form button:hover {
     
 
 }
-/* default message */
+
 /* movie section */
+
+.movie-card {
+    border-bottom: solid 2px #D1D5DB;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0.5em;
+    overflow: auto;
+    min-width: 300px;
+    width: 90%;
+    max-width: 900px;
+    
+    
+    
+}
+
+.movie-card img {
+    max-width: 100%;  
+    height: auto;    
+    min-width: 150px;
+    align-self: center;
+    object-fit: cover;
+    padding: 0.5em;
+
+}
+
+.movie-details  {
+justify-content: start  !important;
+gap: 0.75em;
+
+}
+
+.movie-rating {
+    align-self: center;
+}
+
+
+.movie-details, .movie-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    color: #000;
+    object-fit: cover;
+    padding: 0 1em; 
+
+
+
+}
+.movie-title {
+    font-size: 1.15rem;
+
+
+}
+.movie-info {
+   font-size: 0.9rem;
+    
+
+
+}
+
+.movie-plot {
+    color: #6B7280;
+    text-align:start;
+    padding : 0 1em;
+    font-size: 0.9rem;
+
+}
+
 /* footer */
 /* query */
 @media (max-width: 415px) {
@@ -123,8 +201,7 @@ form button:hover {
         
     }
     #search-form {
-        top: 2%;
-        width: 90%;
+        top: 14px;
     }
 
     .title-container {
