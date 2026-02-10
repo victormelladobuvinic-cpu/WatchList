@@ -1,22 +1,26 @@
 * {
     font-family: "Inter", sans-serif;
+     
+     box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
 }
 
 /* hero */
 header {
-    background-image : linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url("./images/hero.png");
+    background-image : linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9
+    )), url("./images/hero.png");
     background-size: cover;
     background-position: center 25%;
     min-width: 300px;
-    width: 80vw;
+    width: 100vw;
+    height: 15vh;
     padding: 1em;
-    margin:0 auto
+    margin:0 auto;
 }
 
 .title-container {
@@ -24,7 +28,11 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1em;
+    padding: 1em;
+    width: 80vw;
+    margin: 0 auto;
+
+
 
 
 }
@@ -38,8 +46,96 @@ header a {
     color: #fff;
 
 }
+#search-form {
+    display: flex;
+    position: relative;
+    top: -14%;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    
+    background-color: white;
+    
+    border-radius: 0.5em;
+    width: 80%;
+    
 
+}
+form i, form input, form button {
+
+padding: 0.75em;
+
+}
+
+form i {
+    color: #9CA3AF;
+    background-color: white;
+    border: #D1D5DB solid 2px;
+    border-radius: 0.5em 0 0 0.5em;
+    border-right: none;
+    
+    z-index: 1
+
+    
+}
+form input {
+    width: 70%;
+    border: 2px solid #D1D5DB;
+    border-right: none;
+    border-left: none;
+    
+    
+}
+
+form button {
+    border-radius: 0 0.5em 0.5em 0;
+    border: 2px solid #D1D5DB;
+    
+    width: 30%;
+    cursor: pointer;
+    
+}
+
+form button:hover {
+    background-color: #a0a4a9;
+    color: white;
+    cursor: pointer;
+}
 /* main */
+.main-container {
+    text-align: center;
+    color: #DFDDDD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10em 0;
+    
+
+}
 /* default message */
 /* movie section */
 /* footer */
+/* query */
+@media (max-width: 415px) {
+
+    .hero-section {
+        height: 25vh;
+        
+    }
+    #search-form {
+        top: 2%;
+        width: 90%;
+    }
+
+    .title-container {
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    .title-container a {
+        background-color: #908b8b50;
+        padding: 0.5em;
+        border-radius: 0.5em;
+    }
+}
+
