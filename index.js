@@ -14,7 +14,7 @@ searchBtn.addEventListener("submit", (e) => {
     e.preventDefault()
     const movieTitle = movieTitleInput.value;
     if (movieTitle) {
-     movieContainer.innerHTML = "<p>Loading...</p>"   
+    movieContainer.innerHTML = `<p class="loading">Buscando películas...</p>`
     getMovieDataSearch(key,movieTitle)
     } else {
         alert("Please enter a movie title")

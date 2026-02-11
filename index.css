@@ -120,6 +120,11 @@ form button:hover {
 
 }
 
+.loading {
+    font-size: 1.25rem;
+    color: #DFDDDD ;
+}
+
 /* movie section */
 
 .movie-card {
