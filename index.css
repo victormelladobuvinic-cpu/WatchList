@@ -196,7 +196,12 @@ gap: 0.75em;
     font-size: 0.9rem;
 
 }
-
+.add-watchlist {
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+}
 /* footer */
 /* query */
 @media (max-width: 415px) {

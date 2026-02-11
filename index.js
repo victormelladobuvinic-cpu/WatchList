@@ -40,7 +40,7 @@ function getMovieDataSearch(key, title) {
                 let htmlMovies = movieArray.map(({imdbID, Poster, Title, imdbRating, Runtime, Genre, Plot}) => {
                     return `
                    
-                        <div class="movie-card" data-imdbid="${imdbID}">
+                        <div class="movie-card" >
                             <img src="${Poster}" alt="${Title} poster" class="movie-poster">
                             <div class="info-container">
                                 <div class="movie-details">
@@ -50,7 +50,7 @@ function getMovieDataSearch(key, title) {
                                 <div class="movie-info">
                                     <p class="movie-runtime">Runtime: ${Runtime}</p>
                                     <p class="movie-genre">Genre: ${Genre}</p>
-                                    <button class="add-watchlist"><i class="fa-solid fa-circle-plus"></i>Watchlist</button>           
+                                    <button class="add-watchlist" data-imdbid="${imdbID}"><i class="fa-solid fa-circle-plus"></i> Watchlist</button>           
                                 </div>
                                 <p class="movie-plot">${Plot}</p>
                             </div>
@@ -71,4 +71,22 @@ function getMovieDataSearch(key, title) {
 }
 
 
+/* agregar a la watch list */
 
+
+movieContainer.addEventListener("click", (e) => {
+    const addBtn = e.target.closest(".add-watchlist")
+    
+    if (addBtn) {
+
+        const movieId = addBtn.dataset.imdbid
+        
+        addToWatchlist(movieId)
+    }
+})
+
+
+function addToWatchlist(id) {
+
+    
+}
