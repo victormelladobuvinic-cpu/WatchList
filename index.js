@@ -87,6 +87,17 @@ movieContainer.addEventListener("click", (e) => {
 
 
 function addToWatchlist(id) {
+      let watchlistArray = JSON.parse(localStorage.getItem("watchlist")) || []  
 
-    
+    if (!watchlistArray.includes(id)) {
+            watchlistArray.push(id)
+            localStorage.setItem("watchlist", JSON.stringify(watchlistArray))
+            alert("the movie now is in your watchlist")
+    } else {
+        alert(" this movie it's already in your watchlist")
+    }
+
 }
+
+
+

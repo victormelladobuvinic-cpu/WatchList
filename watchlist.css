@@ -63,6 +63,86 @@ header a {
     
 }
 
+
+/* movie cards */
+.movie-card {
+    border-bottom: solid 2px #D1D5DB;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0.5em;
+    overflow: auto;
+    min-width: 300px;
+    width: 90%;
+    max-width: 900px;
+    
+    
+    
+}
+
+.movie-card img {
+    max-width: 100%;  
+    height: auto;    
+    min-width: 150px;
+    align-self: center;
+    object-fit: cover;
+    padding: 0.5em;
+
+}
+
+.movie-details  {
+justify-content: start  !important;
+gap: 0.75em;
+
+}
+
+.movie-rating {
+    align-self: center;
+}
+
+
+.movie-details, .movie-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    color: #000;
+    object-fit: cover;
+    padding: 0 1em; 
+
+
+
+}
+.movie-title {
+    font-size: 1.15rem;
+
+
+}
+.movie-info {
+   font-size: 0.9rem;
+    
+
+
+}
+
+.movie-plot {
+    color: #6B7280;
+    text-align:start;
+    padding : 0 1em;
+    font-size: 0.9rem;
+
+}
+.add-watchlist {
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+}
+
+
+
 /* query */
 @media (max-width: 415px) {
 
