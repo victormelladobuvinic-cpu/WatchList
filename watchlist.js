@@ -7,9 +7,18 @@ const watchlistContainer = document.getElementById("watchlist-container")
  function renderWatchlist () { 
     const watchlistArrayOfIds = JSON.parse(localStorage.getItem("watchlist"))
 
-    if (watchlistArrayOfIds.length > 0) {
+    
+    
+    
+    if (!watchlistArrayOfIds.length > 0) {
+    watchlistContainer.innerHTML = `
+            <h2 class="exploring-txt">Your watchlist is looking a little empty...</h2>
+         <a href="/index.html"><i class="fa-solid fa-circle-plus"></i> Let’s add some movies!</a>
+    `
 
-        watchlistContainer.innerHTML = ""
+    } else {
+
+        
         watchlistArrayOfIds.map( movieId => { 
 
         fetch(`https://www.omdbapi.com/?apikey=${key}&i=${movieId}`)
@@ -32,7 +41,7 @@ const watchlistContainer = document.getElementById("watchlist-container")
                                 <div class="movie-info">
                                     <p class="movie-runtime">Runtime: ${Runtime}</p>
                                     <p class="movie-genre">Genre: ${Genre}</p>
-                                    <button class="add-watchlist" data-imdbid="${imdbID}"><i class="fa-solid fa-circle-minus"></i> Watchlist</button>           
+                                    <button class="remove-watchlist" data-imdbid="${imdbID}"><i class="fa-solid fa-circle-minus"></i> Remove</button>           
                                 </div>
                                 <p class="movie-plot">${Plot}</p>
                             </div>
@@ -42,10 +51,40 @@ const watchlistContainer = document.getElementById("watchlist-container")
                 
                 watchlistContainer.innerHTML += htmlMovies
         })
-        }
+
+        
+        } 
+
+        
  )}
 }
 
 
 
 renderWatchlist()
+
+
+
+
+watchlistContainer.addEventListener("click", (e) => {
+    const addBtn = e.target.closest(".remove-watchlist")
+    
+    if (addBtn) {
+
+        const movieId = addBtn.dataset.imdbid
+        
+        removeFromWatchlist(movieId)
+    }
+})
+
+
+function removeFromWatchlist(idToRemove) {
+      let watchlistArray = JSON.parse(localStorage.getItem("watchlist")) || []
+
+    
+            watchlistArray = watchlistArray.filter( id => id !== idToRemove)
+
+            localStorage.setItem("watchlist", JSON.stringify(watchlistArray))
+           
+    renderWatchlist()
+}
